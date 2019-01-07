@@ -49,7 +49,7 @@ const urlToFetch = `${forecastUrl}${apiKey}&q=${$input.val()}&days=4&hour=11`;
       const days = jsonResponse.forecast.forecastday
       return days;
     } else {
-      throw new Error('Requet failed!')
+      throw new Error('Request failed!')
     }
   }
   catch(error) {
