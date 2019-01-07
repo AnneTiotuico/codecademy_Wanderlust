@@ -45,7 +45,7 @@ const urlToFetch = `${forecastUrl}${apiKey}&q=${$input.val()}&days=4&hour=11`;
     const response = await fetch(urlToFetch);
     if (response.ok) {
       const jsonResponse = await response.json();
-      //console.log(jsonResponse);
+      console.log(jsonResponse);
       const days = jsonResponse.forecast.forecastday
       return days;
     } else {
