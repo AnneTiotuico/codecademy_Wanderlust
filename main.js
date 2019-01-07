@@ -44,9 +44,9 @@ const urlToFetch = `${forecastUrl}${apiKey}&q=${$input.val()}&days=4&hour=11`;
   try{
     const response = await fetch(urlToFetch);
     if (response.ok) {
-      const jsonResponse = await repsonse.json(); // should be: await response.json();
+      const jsonResponse = await response.json();
       //console.log(jsonResponse);
-      const days = jsonResponse.forecast.forcastday  //should be: jsonResponse.forecast.forecastday
+      const days = jsonResponse.forecast.forecastday
       return days;
     } else {
       throw new Error('Requet failed!')
